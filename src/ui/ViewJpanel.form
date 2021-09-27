@@ -73,17 +73,6 @@
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="lblipAddress" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblbiometric" alignment="1" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txtbiometric" min="-2" pref="396" max="-2" attributes="0"/>
-                              <Component id="txtipAddress" min="-2" pref="224" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="lbldeviceNo" alignment="1" min="-2" max="-2" attributes="0"/>
                               <Component id="lbllinkedIn" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -106,6 +95,11 @@
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="lblipAddress" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                                  <Component id="txtipAddress" min="-2" pref="224" max="-2" attributes="0"/>
+                              </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Component id="lbllicenseNo" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -250,12 +244,7 @@
                       <Component id="lblipAddress" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtipAddress" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lblbiometric" alignment="3" min="-2" pref="17" max="-2" attributes="0"/>
-                      <Component id="txtbiometric" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="54" max="32767" attributes="0"/>
+                  <EmptySpace pref="87" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -331,14 +320,6 @@
             <Property name="text" type="java.lang.String" value="Date of Birth"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblbiometric">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="14" style="0"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Biometric"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JTextField" name="txttelephone">
         </Component>
         <Component class="javax.swing.JTextField" name="txtipAddress">
@@ -360,8 +341,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtfax">
-        </Component>
-        <Component class="javax.swing.JTextField" name="txtbiometric">
         </Component>
         <Component class="javax.swing.JLabel" name="lblfax">
           <Properties>

@@ -499,7 +499,7 @@ public class CreateJpanel extends javax.swing.JPanel {
         if(sav == JFileChooser.APPROVE_OPTION)
             {
                 File selectedimageFile = imageFile.getSelectedFile();
-                upload(selectedimageFile);
+                product.setPic(selectedimageFile);
             }
         else if(sav == JFileChooser.CANCEL_OPTION)
         {

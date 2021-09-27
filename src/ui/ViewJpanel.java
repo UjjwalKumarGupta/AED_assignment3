@@ -6,6 +6,8 @@
 package ui;
 
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import model.Product;
 
 /**
@@ -51,13 +53,11 @@ public class ViewJpanel extends javax.swing.JPanel {
         txtdob = new javax.swing.JTextField();
         txtlinkedIn = new javax.swing.JTextField();
         lbldob = new javax.swing.JLabel();
-        lblbiometric = new javax.swing.JLabel();
         txttelephone = new javax.swing.JTextField();
         txtipAddress = new javax.swing.JTextField();
         lblemail = new javax.swing.JLabel();
         lblipAddress = new javax.swing.JLabel();
         txtfax = new javax.swing.JTextField();
-        txtbiometric = new javax.swing.JTextField();
         lblfax = new javax.swing.JLabel();
         txtemail = new javax.swing.JTextField();
         lblmedNo = new javax.swing.JLabel();
@@ -96,9 +96,6 @@ public class ViewJpanel extends javax.swing.JPanel {
         lbldob.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         lbldob.setText("Date of Birth");
 
-        lblbiometric.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        lblbiometric.setText("Biometric");
-
         lblemail.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         lblemail.setText("Email");
 
@@ -132,14 +129,6 @@ public class ViewJpanel extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblipAddress)
-                            .addComponent(lblbiometric))
-                        .addGap(38, 38, 38)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtbiometric, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtipAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(lbldeviceNo)
                             .addComponent(lbllinkedIn))
                         .addGap(38, 38, 38)
@@ -156,6 +145,10 @@ public class ViewJpanel extends javax.swing.JPanel {
                             .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(lblipAddress)
+                                .addGap(38, 38, 38)
+                                .addComponent(txtipAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(lbllicenseNo)
@@ -264,11 +257,7 @@ public class ViewJpanel extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblipAddress)
                     .addComponent(txtipAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblbiometric, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtbiometric, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(87, Short.MAX_VALUE))
         );
 
         lblImage.setText("jLabel1");
@@ -314,7 +303,6 @@ public class ViewJpanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblName;
     private javax.swing.JLabel lblTitle;
     private javax.swing.JLabel lblbankNo;
-    private javax.swing.JLabel lblbiometric;
     private javax.swing.JLabel lbldeviceNo;
     private javax.swing.JLabel lbldob;
     private javax.swing.JLabel lblemail;
@@ -330,7 +318,6 @@ public class ViewJpanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtAddress;
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtbankNo;
-    private javax.swing.JTextField txtbiometric;
     private javax.swing.JTextField txtdeviceNo;
     private javax.swing.JTextField txtdob;
     private javax.swing.JTextField txtemail;
@@ -363,6 +350,13 @@ public class ViewJpanel extends javax.swing.JPanel {
         txtssn.setText(product.getSsn());
         txttelephone.setText(Long.toString(product.getTelephone()));
         txtvehicleNo.setText(product.getVehicleNo());
+        
+        ImageIcon icon = new ImageIcon(product.getPic().getAbsolutePath());
+        Image image = icon.getImage();
+        Image imgIcon = image.getScaledInstance(220,130,java.awt.Image.SCALE_SMOOTH);
+        icon = new ImageIcon(imgIcon);
+        lblImage.setIcon(icon);
+        
     }
 
     
